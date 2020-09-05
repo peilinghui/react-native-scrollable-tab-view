@@ -196,7 +196,7 @@ const ScrollableTabBar = createReactClass({
             const renderTab = this.props.renderTab || this.renderTab;
             return renderTab(name, page, isTabActive, this.props.goToPage, this.measureTab.bind(this, page));
           })}
-          <TouchableOpacity style={[styles.tab,this.props.tabStyle]} onPress={()=>this.props.clickMore}>
+          <TouchableOpacity style={[styles.tab,this.props.tabStyle]} onPress={()=>this.props.clickMore()}>
             <Image style={styles.tabBtnIcon} source={require('./rightBtn.png')} />
           </TouchableOpacity>
           <Animated.View style={[tabUnderlineStyle, dynamicTabUnderline, this.props.underlineStyle,]} />
